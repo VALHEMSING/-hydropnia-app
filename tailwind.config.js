@@ -1,31 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode:"class",
-  // NOTE: Update this to include the paths to all files that contain Nativewind classes.
-  content: ["./App.tsx", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: ["./App.tsx", "./src/components/**/*.{js,jsx,ts,tsx}", "./src/views/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
+  darkMode: "class", // ¡Importante para NativeWind!
   theme: {
     extend: {
       colors: {
-        // Mode LIGHT
+        // Light Mode
         light: {
-          primary: "#3D8D7A",
+          primary: "#B6F9C9",
           secondary: "#B3D8A8",
-          text: "#41bc03 ",
-          buttons: "#A3D1C6",
-          bg: "#d6ffc1"
+          text: "#C9FFE2",
+          buttons: "#96E8BC",
+          cards: "#7DD181",
+          bg: "#4B7F52", // Fondo claro (opcional)
+         divider: '#e9ecef',
+
         },
-        
-        // Mode DARK
-         dark: {
-          primary: "#5AB39E",
+
+
+        // Dark Mode
+        dark: {
+          primary: "#5B8266",
           secondary: "#3D8D7A",
-          text: "#E0E6D1",
-          buttons: "#2A6B5C",
-          bg: "#121E1B", // Fondo oscuro       // Fondo oscuro
+          text: "#AEF6C7",
+          buttons: "#3E6259",
+          bg: "#212922",
+          cards: "#294936",
+          divider: '#343a40'
+        },
       },
-      }
     },
   },
   plugins: [],
-}
+};
