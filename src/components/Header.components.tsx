@@ -10,7 +10,7 @@ export const Header = ({ title = "Hidroponia" }: HeaderProps) => {
   
   return (
     <View 
-      className={`px-4 py-3 flex-row justify-center items-center ${
+     className={` px-4 pt-14  flex-row justify-center items-center ${
         colorScheme === 'dark' ? 'bg-dark-primary' : 'bg-light-primary'
       }`}
     >
@@ -21,7 +21,7 @@ export const Header = ({ title = "Hidroponia" }: HeaderProps) => {
           color={colorScheme === 'dark' ? "#AEF6C7" : "#C9FFE2"}
         />
         <Text 
-          className={`text-xl font-bold ${
+          className={`text-3xl font-bold ${
             colorScheme === 'dark' ? 'text-dark-text' : 'text-light-text'
           }`}
         >
