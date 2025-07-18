@@ -4,7 +4,7 @@ import { Header } from "./components/Header.components";
 
 const MainApp = () => {
   return (
-    <View className=" flex flex-1">
+    <View className="flex flex-1">
       <Header />
       <Hydroponnie /> 
     </View>
