@@ -11,7 +11,7 @@ export const Header = ({ title = "Hidroponia" }: HeaderProps) => {
   return (
     <View
       className={` px-4 pt-14  flex-row justify-center items-center rounded-bl-full rounded-br-full
-         border-2 dark:border-dark-text  ${
+         border-2 border-light-text dark:border-dark-text  ${
            colorScheme === "dark" ? "bg-dark-primary" : "bg-light-primary"
          }`}
     >
