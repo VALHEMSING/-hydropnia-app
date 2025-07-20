@@ -11,36 +11,36 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Light Mode
+        // 🌞 Light Mode
         light: {
-          primary: "#B6F9C9",
-          secondary: "#B3D8A8",
-          text: "#2C5F2D",
-          textSecondary: "#5A6E5A",
-          buttonPrimary: "#96E8BC",
+          primary: "#A0F8B7", // Verde menta vibrante
+          secondary: "#B5DDA4", // Verde suave
+          text: "#1F3D2B", // Texto primario oscuro
+          textSecondary: "#4F6654", // Texto secundario
+          buttonPrimary: "#34D399", // Botón verde brillante
           buttonText: "#FFFFFF",
           cards: "#FFFFFF",
-          bgCard: "#e8e8e8",
-          bg: "#F1F7F2", // Fondo claro (opcional)
-          divider: "#e9ecef",
-          title: "#4CAF50",
-          bordes: "#E0E0E0",
+          bgCard: "#F2FDF6", // Fondo suave para tarjetas
+          bg: "#F8FFF9", // Fondo general
+          divider: "#D1E7DD",
+          title: "#1E9D61", // Verde más saturado
+          bordes: "#D3E4D1",
         },
 
-        // Dark Mode
+        // 🌚 Dark Mode
         dark: {
-          primary: "#204E4A",
-          secondary: "#3D8D7A",
-          text: "#D0F0C0",
-          textSecondary: "#A8C3A3",
-          buttonPrimary: "#81C784",
-          buttonText: "#1B2E1F",
-          bg: "#1B2E1F",
-          cards: "#2F4F2F",
-          bgCard: "#f3e6e3",
-          divider: "#343a40",
-          title: "#66BB6A",
-          borderShadows: "#2F4F2F88",
+          primary: "#1E473A", // Verde pino profundo
+          secondary: "#63D2A1", // Verde menta saturado
+          text: "#CFFFE1", // Texto claro
+          textSecondary: "#A8DAB5",
+          buttonPrimary: "#34D399", // Mismo verde brillante para botones
+          buttonText: "#062B1E",
+          bg: "#0A1E1B", // Casi negro con tinte verde
+          cards: "#1C3732",
+          bgCard: "#10231E",
+          divider: "#1F3D2D",
+          title: "#7CF9C2", // Verde vibrante para títulos
+          borderShadows: "#1C373288",
         },
       },
     },
