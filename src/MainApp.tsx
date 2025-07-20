@@ -4,9 +4,9 @@ import { Header } from "./components/Header.components";
 
 const MainApp = () => {
   return (
-    <View className="flex flex-1">
+    <View className="flex-1 bg-light-bg dark:bg-dark-bg">
       <Header />
-      <Hydroponnie /> 
+      <Hydroponnie />
     </View>
   );
 };
