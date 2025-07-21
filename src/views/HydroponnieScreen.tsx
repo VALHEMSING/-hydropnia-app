@@ -1,6 +1,7 @@
 import React from "react";
 import { ScrollView, View, Text, Alert, useColorScheme } from "react-native";
 import { Button, Card, Divider, Title } from "react-native-paper";
+import { NAME_RED, PASSWORD_RED } from "../constants/constants";
 
 const Hydroponnie = () => {
   const isDark = useColorScheme() === "dark"; // ← usamos tema activo
@@ -26,7 +27,7 @@ const Hydroponnie = () => {
                 </Text>
                 <Text className="font-extrabold text-light-textSecondary dark:text-dark-text">
                   {"  "}
-                  Hidroponia
+                  {NAME_RED}
                 </Text>
               </Text>
               <Text className="my-1">
@@ -35,7 +36,7 @@ const Hydroponnie = () => {
                 </Text>
                 <Text className="font-extrabold text-light-textSecondary dark:text-dark-text">
                   {"  "}
-                  1234567
+                  {PASSWORD_RED}
                 </Text>
               </Text>
             </View>
