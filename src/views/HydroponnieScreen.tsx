@@ -31,7 +31,7 @@ const Hydroponnie: React.FC = () => {
 
   return (
     <ScrollView
-      className="flex-1 p-8 pt-4 bg-light-bg dark:bg-dark-bg"
+      className="flex-1 p-8 pt-4 bg-light-bg dark:bg-dark-bg "
       keyboardShouldPersistTaps="handled"
     >
       {/* CARD 1: WiFi */}
