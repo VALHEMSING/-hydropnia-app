@@ -3,8 +3,11 @@ import { ScrollView, View, Text, Alert, useColorScheme } from "react-native";
 import { Button, Card, Divider, Title, Snackbar } from "react-native-paper";
 import { NAME_RED, PASSWORD_RED } from "../constants/constants";
 import { engineServices } from "../api/engines.service";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const Hydroponnie: React.FC = () => {
+  const insets = useSafeAreaInsets();
+
   const [snackbarVisible, setSnackbarVisible] = useState<boolean>(false);
   const [snackbarMessage, setSnackbarMessage] = useState<string>("");
 
@@ -31,19 +34,20 @@ const Hydroponnie: React.FC = () => {
 
   return (
     <ScrollView
-      className="flex-1 p-8 pt-4 bg-light-bg dark:bg-dark-bg "
+      className="flex-1 p-8 pt-4  bg-light-bg dark:bg-dark-bg "
+      contentContainerStyle={{ paddingBottom: insets.bottom + 16 }}
       keyboardShouldPersistTaps="handled"
     >
       {/* CARD 1: WiFi */}
-      <Card className="mb-4 ">
-        <Card.Content className=" dark:border-dark-text border-2 rounded-xl bg-light-cards dark:bg-dark-cards">
+      <Card className="my-4 ">
+        <Card.Content className=" dark:border-dark-text border-2 rounded-xl bg-light-bg dark:bg-dark-cards">
           <View>
             <Title>
               <Text className="font-extrabold text-light-title dark:text-dark-title text-xl">
                 Configuración WiFi
               </Text>
             </Title>
-            <View className="items-start p-3 mt-2 rounded-lg bg-light-bgCard dark:bg-dark-primary">
+            <View className="items-start p-3 mt-2 rounded-xl bg-light-bgCard dark:bg-dark-primary border-2">
               <Text className="my-1">
                 <Text className="font-semibold text-light-text dark:text-dark-secondary">
                   Red:
@@ -67,9 +71,34 @@ const Hydroponnie: React.FC = () => {
         </Card.Content>
       </Card>
 
-      {/* CARD 2: Controles */}
       <Card>
-        <Card.Content className="dark:border-dark-text border-2 rounded-xl bg-light-bgCard dark:bg-dark-cards">
+        <Card.Content className="dark:border-dark-text border-2 rounded-xl bg-light-bg dark:bg-dark-cards">
+          <View className="items-center justify-center w-full">
+            <Title >
+              <Text className="font-extrabold text-light-title dark:text-dark-title ">
+                Temperatura
+              </Text>
+            </Title>
+            <View className="  dark:border-dark-text  items-center p-3 mt-2 rounded-2xl bg-light-bgCard dark:bg-dark-primary border-2">
+              <Text className="mt-1">
+                <Text className="font-semibold  text-light-text dark:text-dark-secondary">
+                  Temperatura actual
+                </Text>
+              </Text>
+              <Text className="mt-2">
+                <Text className="font-extrabold text-3xl md:text-xl text-light-textSecondary dark:text-dark-text">
+                  29
+                  {"°"}
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </Card.Content>
+      </Card>
+
+      {/* CARD 2: Controles */}
+      <Card className="my-5">
+        <Card.Content className="dark:border-dark-text border-2 rounded-xl bg-light-bg dark:bg-dark-cards">
           <View className="mt-0 p-1">
             <Title>
               <Text className="font-bold text-light-title dark:text-dark-title">
@@ -262,6 +291,7 @@ const Hydroponnie: React.FC = () => {
               </View>
             </View>
           </View>
+          <Divider />
         </Card.Content>
       </Card>
 

@@ -20,8 +20,8 @@ module.exports = {
           buttonPrimary: "#34D399", // Botón verde brillante
           buttonText: "#FFFFFF",
           cards: "#FFFFFF",
-          bgCard: "#F2FDF6", // Fondo suave para tarjetas
-          bg: "#F8FFF9", // Fondo general
+          bgCard: "#F8FFF9", // Fondo suave para tarjetas
+          bg: "#e1ffef", // Fondo general
           divider: "#D1E7DD",
           title: "#1E9D61", // Verde más saturado
           bordes: "#D3E4D1",

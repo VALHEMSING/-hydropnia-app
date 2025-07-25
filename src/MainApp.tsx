@@ -7,8 +7,8 @@ import React from "react";
 const MainApp:React.FC = () => {
   return (
     <SafeAreaProvider>
-    <View className="flex-1 bg-light-bgCard dark:bg-dark-bg">
-      <Header />
+    <View className="flex-1 bg-light-bg dark:bg-dark-bg">
+      <Header/>
       <Hydroponnie />
     </View>
     </SafeAreaProvider>
