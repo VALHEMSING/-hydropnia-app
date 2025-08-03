@@ -21,7 +21,7 @@ const Hydroponnie: React.FC = () => {
   const handleAction = async (
     callback: () => Promise<void>,
     successMsg: string,
-    errorMsg: string
+    errorMsg: string,
   ) => {
     try {
       await callback();
@@ -74,7 +74,7 @@ const Hydroponnie: React.FC = () => {
       <Card>
         <Card.Content className="dark:border-dark-text border-2 rounded-xl bg-light-bg dark:bg-dark-cards">
           <View className="items-center justify-center w-full">
-            <Title >
+            <Title>
               <Text className="font-extrabold text-light-title dark:text-dark-title ">
                 Temperatura
               </Text>
@@ -128,7 +128,7 @@ const Hydroponnie: React.FC = () => {
                     handleAction(
                       engineServices.handleLedOn,
                       "Led encendido",
-                      "Error al encender el led..."
+                      "Error al encender el led...",
                     )
                   }
                 >
@@ -154,7 +154,7 @@ const Hydroponnie: React.FC = () => {
                     handleAction(
                       engineServices.handleLedOff,
                       "Apagado el Led...",
-                      "Error al apagar el led"
+                      "Error al apagar el led",
                     )
                   }
                 >
@@ -192,7 +192,7 @@ const Hydroponnie: React.FC = () => {
                     handleAction(
                       engineServices.handleSubir,
                       "Secador encendido",
-                      "Error al encender el secador..."
+                      "Error al encender el secador...",
                     )
                   }
                 >
@@ -218,7 +218,7 @@ const Hydroponnie: React.FC = () => {
                     handleAction(
                       engineServices.handleBajar,
                       "Bajando polea...",
-                      "Error al bajar la polea"
+                      "Error al bajar la polea",
                     )
                   }
                 >
@@ -256,7 +256,7 @@ const Hydroponnie: React.FC = () => {
                     handleAction(
                       engineServices.handleSubir,
                       "Secador encendido",
-                      "Error al encender el secador..."
+                      "Error al encender el secador...",
                     )
                   }
                 >
@@ -282,7 +282,7 @@ const Hydroponnie: React.FC = () => {
                     handleAction(
                       engineServices.handleBajar,
                       "Bajando polea...",
-                      "Error al bajar la polea"
+                      "Error al bajar la polea",
                     )
                   }
                 >
@@ -292,6 +292,55 @@ const Hydroponnie: React.FC = () => {
             </View>
           </View>
           <Divider />
+          <View className="pt-2">
+            <Title>
+              <Text className="font-bold text-light-title dark:text-dark-title">
+                Bomba de agua
+              </Text>
+            </Title>
+            <View className="flex md:flex-row justify-start">
+              <View className="flex-row gap-5 p-5 w-full pt-2 rounded-xl overflow-hidden">
+                <Button
+                  mode="contained"
+                  contentStyle={{
+                    paddingVertical: 12,
+                  }}
+                  labelStyle={{
+                    fontWeight: "bold",
+                    color: isDark ? "#81C784" : "#101F14",
+                  }}
+                  style={{
+                    width: "48%",
+                    backgroundColor: isDark ? "#373d20" : "#8FD19E",
+                    borderRadius: 12,
+                    borderWidth: 2,
+                    borderColor: isDark ? "#D0F0C0" : "#000000",
+                  }}
+                >
+                  Encender
+                </Button>
+                <Button
+                  mode="contained"
+                  contentStyle={{
+                    paddingVertical: 12,
+                  }}
+                  labelStyle={{
+                    fontWeight: "bold",
+                    color: isDark ? "#81C784" : "#101F14",
+                  }}
+                  style={{
+                    width: "48%",
+                    backgroundColor: isDark ? "#373d20" : "#8FD19E",
+                    borderRadius: 12,
+                    borderWidth: 2,
+                    borderColor: isDark ? "#D0F0C0" : "#000000",
+                  }}
+                >
+                  Apagar
+                </Button>
+              </View>
+            </View>
+          </View>
         </Card.Content>
       </Card>
 
