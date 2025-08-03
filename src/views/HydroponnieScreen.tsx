@@ -316,6 +316,13 @@ const Hydroponnie: React.FC = () => {
                     borderWidth: 2,
                     borderColor: isDark ? "#D0F0C0" : "#000000",
                   }}
+                  onPress={() =>
+                    handleAction(
+                      engineServices.handleBombaOn,
+                      "Bomba encendida...",
+                      "Error al enceder la bomba...",
+                    )
+                  }
                 >
                   Encender
                 </Button>
@@ -335,6 +342,13 @@ const Hydroponnie: React.FC = () => {
                     borderWidth: 2,
                     borderColor: isDark ? "#D0F0C0" : "#000000",
                   }}
+                  onPress={() =>
+                    handleAction(
+                      engineServices.handleBombaOff,
+                      "Apagando la bomba...",
+                      "Error al apagar la bomba...",
+                    )
+                  }
                 >
                   Apagar
                 </Button>
